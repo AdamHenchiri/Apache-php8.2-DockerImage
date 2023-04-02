@@ -1,0 +1,13 @@
+  version: '3.8'
+  services:
+    sae204:
+      build: apache
+      container_name: web88
+      volumes:
+          - ./html_wsl:/var/www/html
+      environment:
+      - PHP_EXTENSIONS=pdo_pgsql,pgsql,gd,zip,redis
+      ports:
+          - 88:80 
+    
+   
